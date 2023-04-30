@@ -10,7 +10,7 @@
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",
-    "prepare": "npm run compile",
+    "prepare": "npm run compile && husky install",
     "pretest": "npm run compile",
     "posttest": "npm run lint"
   },
@@ -22,6 +22,7 @@
     "@types/node": "^18.16.3",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4",
-    "gts": "^3.1.1"
+    "gts": "^3.1.1",
+    "husky": "^8.0.0"
   }
 }
