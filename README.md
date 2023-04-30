@@ -5,6 +5,7 @@ A starter template for Node.js apps.
 - Directly execute TypeScript on Node.js without precompiling with [TypeScript Execute (`tsx`)](https://github.com/esbuild-kit/tsx)
 - Opinionated TypeScript style guide, formatter, and linter using [`gts`](https://github.com/google/gts)
 - `git` pre-commit hooks with [`husky`](https://github.com/typicode/husky)
+- [`jest`](https://github.com/kulshekhar/ts-jest) unit testing framework
 
 ## Steps to recreate this repo
 1. Create `package.json` file:
@@ -36,4 +37,10 @@ npx gts init
 6. Install [`husky`](https://github.com/typicode/husky)
 ```
 npx husky-init && npm install
+```
+
+7. Setup [`jest`](https://github.com/kulshekhar/ts-jest):
+```
+npm i -D ts-jest @types/jest
+npx ts-jest config:init
 ```
