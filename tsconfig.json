@@ -1,5 +1,8 @@
 {
-  "extends": "./node_modules/gts/tsconfig-google.json",
+  "extends": [
+    "./node_modules/gts/tsconfig-google.json",
+    "@tsconfig/node-lts/tsconfig.json"
+  ],
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "build",
@@ -18,11 +21,8 @@
   "ts-node": {
     "esm": true,
     "transpileOnly": true,
-		"files": true,
-		"experimentalResolver": true
+    "files": true,
+    "experimentalResolver": true
   },
-  "include": [
-    "src/**/*.ts",
-    "test/**/*.ts"
-  ]
+  "include": ["src/**/*.ts", "test/**/*.ts"]
 }
