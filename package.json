@@ -4,7 +4,7 @@
   "description": "A starter template for Node.js apps.",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch ./src/index.ts",
+    "dev": "concurrently 'npx tsc --watch' 'nodemon -q build/src/index.js'",
     "test": "jest",
     "lint": "gts lint",
     "clean": "gts clean",
@@ -21,10 +21,11 @@
     "@tsconfig/node-lts": "^18.12.1",
     "@types/jest": "^29.5.1",
     "@types/node": "^18.16.3",
+    "concurrently": "^8.0.1",
     "gts": "^3.1.1",
     "husky": "^8.0.0",
+    "nodemon": "^2.0.22",
     "ts-jest": "^29.1.0",
-    "tsx": "^3.12.7",
     "typescript": "^5.0.4"
   }
 }
