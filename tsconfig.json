@@ -1,5 +1,8 @@
 {
-  "extends": "./node_modules/gts/tsconfig-google.json",
+  "extends": [
+    "./node_modules/gts/tsconfig-google.json",
+    "@tsconfig/node-lts/tsconfig.json"
+  ],
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "build"
