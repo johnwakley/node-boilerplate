@@ -1,11 +1,23 @@
 {
-  "extends": [
-    "./node_modules/gts/tsconfig-google.json",
-    "@tsconfig/node-lts/tsconfig.json"
-  ],
+  // "extends": [
+  //   "./node_modules/gts/tsconfig-google.json",
+  //   "@tsconfig/node-lts/tsconfig.json"
+  // ],
   "compilerOptions": {
     "rootDir": ".",
-    "outDir": "build"
+    "outDir": "build",
+
+    // override
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "node"
   },
-  "include": ["src/**/*.ts", "test/**/*.ts"]
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "ts-node": {
+    "esm": true
+  }
 }

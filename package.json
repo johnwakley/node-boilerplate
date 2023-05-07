@@ -4,7 +4,7 @@
   "description": "A starter template for Node.js apps.",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-esm ./src/index.ts",
+    "dev": "ts-node --esm ./src/index.ts",
     "test": "jest",
     "lint": "gts lint",
     "clean": "gts clean",
@@ -24,10 +24,10 @@
     "gts": "^3.1.1",
     "husky": "^8.0.0",
     "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "node-fetch": "^3.3.1",
     "p-retry": "^5.1.2"
   }
