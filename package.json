@@ -28,7 +28,6 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "node-fetch": "^3.3.1",
     "p-retry": "^5.1.2"
   }
