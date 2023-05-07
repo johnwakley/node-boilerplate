@@ -1,18 +1,15 @@
-import * as http from 'http';
+import pRetry, {AbortError} from 'p-retry';
+import fetch from 'node-fetch';
 
-const port = 8080;
+const run = async () => {
+  const response = await fetch('https://sindresorhus.com/unicorn');
 
-http
-  .createServer((_request, response) => {
-    response.writeHead(200, {
-      'Content-Type': 'text/plain',
-    });
+  // Abort retrying if the resource doesn't exist
+  if (response.status === 404) {
+    throw new AbortError(response.statusText);
+  }
 
-    const message = 'Hello World!';
-    response.write(message);
-    console.log(`Sent message: ${message}`);
-    response.end();
-  })
-  .listen(port);
+  return response.blob();
+};
 
-console.log(`Server running at http://localhost:${port}/`);
+console.log(await pRetry(run, {retries: 5}));
