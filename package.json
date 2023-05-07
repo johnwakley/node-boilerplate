@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A starter template for Node.js apps.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "tsx watch ./src/index.ts",
     "test": "jest",
